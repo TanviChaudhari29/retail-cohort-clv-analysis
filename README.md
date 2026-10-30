@@ -140,6 +140,13 @@ The Power BI dashboard includes two pages:
 **Sales Overview:** Revenue trends, products, countries, and sales performance.
 
 **Customers:** Retention, RFM segments, and customer value.
+## Power BI Dashboard
+
+### Page 1: Sales Performance
+![Sales Performance Dashboard](reports/figures/dashboard_overview.png)
+
+### Page 2: Customer Retention & Lifetime Value
+![Customer Retention Dashboard](reports/figures/dashboard_customers.png)
 
 ## Key Findings
 
