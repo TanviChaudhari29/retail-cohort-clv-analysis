@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+.venv/
+
+# Dataset and generated data
+data/raw/
+data/processed/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test and development cache
+.pytest_cache/
+.coverage
+
+# Power BI
+*.pbix
+dashboard_backup/
+**/.pbi/cache.abf
+**/localSettings.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
