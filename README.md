@@ -3,6 +3,21 @@
 A Python and Power BI analytics project exploring customer retention, cohort behaviour, RFM segmentation, and customer lifetime value (CLV) using two years of transactions from a UK-based online giftware wholesaler.
 
 The goal is to understand whether new customers return, how customer value changes over time, and where the business should focus its retention efforts.
+## Project at a Glance
+
+**Business question:** How effectively does an online retailer retain newly acquired customers, and which customer segments contribute the most revenue?
+
+**Approach:** Cleaned and analyzed two years of UK retail transactions using Python, performed cohort retention and RFM segmentation, and built a two-page Power BI dashboard.
+
+**Key results:**
+- Approximately 21% of new customers returned in month 1.
+- The top 20% of identifiable customers contributed 77% of customer revenue.
+- Champions generated approximately 69.2% of RFM-segmented revenue.
+- Approximately £2.57M in net revenue was associated with transactions missing customer IDs, limiting customer-level analysis.
+
+**Business takeaway:** Prioritize early customer retention, protect high-value customers, and test targeted reactivation campaigns.
+
+**View the results:** [Open the two-page Power BI dashboard (PDF)](dashboard/dashboard.pdf)
 
 ## Project Objectives
 
@@ -140,6 +155,12 @@ The Power BI dashboard includes two pages:
 **Sales Overview:** Revenue trends, products, countries, and sales performance.
 
 **Customers:** Retention, RFM segments, and customer value.
+## Cohort Retention Analysis
+
+The heatmap shows the percentage of customers from each acquisition cohort who returned in subsequent months. It helps identify early customer drop-off and differences in retention across cohorts.
+
+![Cohort Retention Heatmap](reports/figures/cohort_retention_heatmap.png)
+
 ## Power BI Dashboard
 
 ### Page 1: Sales Performance
@@ -150,7 +171,7 @@ The Power BI dashboard includes two pages:
 
 ## Key Findings
 
-The existing analysis reports the following results. These figures should be reproducible by running the project's notebooks and tests.
+The analysis of the cleaned Online Retail II dataset produced the following findings. The calculations are implemented in the project's Python notebooks and analysis functions.
 
 - **Revenue growth:** Net revenue grew 2.3% between January–November 2010 and the same period in 2011.
 - **Seasonality:** September–November accounted for 41% of January–November revenue.
@@ -160,6 +181,52 @@ The existing analysis reports the following results. These figures should be rep
 - **Customer value:** The reported average new-customer revenue was £634 over 3 months and £1,373 over 12 months.
 
 These are historical findings from the dataset, not forecasts of future customer behaviour.
+
+## Business Recommendations
+
+The analysis highlights opportunities to improve customer retention, protect high-value customer relationships, and increase the effectiveness of marketing efforts.
+
+### 1. Improve Early Customer Retention
+
+**Finding:** Approximately 21% of newly acquired customers returned in month 1.
+
+**Business action:** Introduce a structured post-purchase engagement program for first-time customers. Test personalized follow-up messages, product recommendations, and second-purchase incentives during the first month.
+
+**How to measure success:** Track month-1 cohort retention, second-purchase conversion, and repeat-purchase revenue. Experiment with different follow-up timings rather than assuming a specific week is optimal.
+
+### 2. Protect High-Value Customers
+
+**Finding:** The top 20% of customers contributed approximately 77% of identifiable customer revenue.
+
+**Business action:** Prioritize relationship management for high-value customers through personalized service, loyalty benefits, and proactive engagement.
+
+**How to measure success:** Monitor repeat-purchase frequency, revenue retention, and changes in spending among high-value customers.
+
+### 3. Reactivate At-Risk Customers
+
+**Finding:** RFM segmentation identifies customer groups with different purchasing patterns, including at-risk and inactive customers.
+
+**Business action:** Create targeted reactivation campaigns for customers whose purchasing activity has declined. Tailor offers based on previous purchasing behavior and test them against a control group.
+
+**How to measure success:** Track reactivation rate, incremental revenue, and campaign return on investment.
+
+### 4. Plan Inventory Around Seasonal Demand
+
+**Finding:** September–November contributed approximately 41% of January–November revenue.
+
+**Business action:** Prepare inventory, staffing, and promotional plans ahead of historically strong sales months. Investigate whether demand patterns differ by product and country.
+
+**How to measure success:** Monitor stock availability, monthly sales performance, and seasonal forecast accuracy.
+
+### 5. Prioritize High-Contributing Products
+
+**Finding:** Approximately 22% of products generated 80% of product revenue.
+
+**Business action:** Prioritize availability and merchandising for high-revenue products while evaluating lower-performing products for optimization.
+
+**How to measure success:** Track product revenue, inventory availability, and contribution margins once cost data becomes available.
+
+**Important:** These recommendations are proposed strategies based on historical transaction patterns. Their effectiveness should be validated through controlled experiments and ongoing KPI monitoring.
 
 ## Data Quality
 
@@ -180,6 +247,7 @@ See `reports/data_quality.md` and `reports/cleaning_log.md` for further details.
 - Missing Customer IDs limit customer-level analysis.
 - December 2011 contains only partial-month data.
 - CLV estimates are based on historical spending and should not be interpreted as guaranteed future revenue.
+**12-month customer value methodology:** Historical customer value is calculated as average cumulative net revenue per customer over the first 12 calendar months, including the acquisition month. To avoid incomplete observation windows, the analysis includes only acquisition cohorts with 12 fully observable months. Later cohorts are excluded from the 12-month calculation. The 3-month and 12-month metrics therefore use different eligible customer populations and should not be interpreted as directly comparable forecasts. These values represent observed revenue, not predicted future customer lifetime value.
 
 ## Repository Contents
 
