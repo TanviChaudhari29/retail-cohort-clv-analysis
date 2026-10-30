@@ -247,6 +247,8 @@ See `reports/data_quality.md` and `reports/cleaning_log.md` for further details.
 - Missing Customer IDs limit customer-level analysis.
 - December 2011 contains only partial-month data.
 - CLV estimates are based on historical spending and should not be interpreted as guaranteed future revenue.
+- **First-cohort bias:** The dataset begins in December 2009, so customers first seen that month may include existing customers whose earlier purchases aren't recorded. The December 2009 cohort is therefore likely overstated, and its retention may not reflect true new-customer behaviour.
+
 **12-month customer value methodology:** Historical customer value is calculated as average cumulative net revenue per customer over the first 12 calendar months, including the acquisition month. To avoid incomplete observation windows, the analysis includes only acquisition cohorts with 12 fully observable months. Later cohorts are excluded from the 12-month calculation. The 3-month and 12-month metrics therefore use different eligible customer populations and should not be interpreted as directly comparable forecasts. These values represent observed revenue, not predicted future customer lifetime value.
 
 ## Repository Contents
