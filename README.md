@@ -230,7 +230,7 @@ The analysis highlights opportunities to improve customer retention, protect hig
 
 ## Data Quality
 
-The original analysis reports:
+The cleaning process resulted in:
 
 - 40,355 rows removed during cleaning, approximately 3.8% of the original records.
 - A 3.6% cancellation rate when considering product transactions.
